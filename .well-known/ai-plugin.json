@@ -1,0 +1,17 @@
+{
+  "schema_version": "v1",
+  "name_for_human": "Door43 Translation Resources",
+  "name_for_model": "door43",
+  "description_for_human": "Access Bible translation resources from Door43",
+  "description_for_model": "Fetch translation resource files from Door43 git server",
+  "auth": {
+    "type": "none"
+  },
+  "api": {
+    "url": "/openapi.json",
+    "is_user_authenticated": false
+  },
+  "logo_url": "",
+  "contact_email": "",
+  "legal_info_url": ""
+}
