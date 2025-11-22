@@ -4,3 +4,12 @@ __pycache__/
 *.pyo
 .env
 *.cache
+node_modules/
+dist/
+.DS_Store
+*.json
+!package.json
+!package-lock.json
+!app/package.json
+!app/package-lock.json
+!app/src/**/*.json
