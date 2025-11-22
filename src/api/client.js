@@ -1,4 +1,6 @@
-const BASE_URL = '/api';
+const BASE_URL = import.meta.env.PROD 
+  ? 'https://translation-helps-mcp-945.pages.dev' 
+  : '/api';
 
 export const fetchScripture = async (reference) => {
   const response = await fetch(`${BASE_URL}/fetch-scripture?reference=${encodeURIComponent(reference)}`);
