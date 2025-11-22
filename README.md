@@ -1,19 +1,60 @@
-# Door43 Model Context Provider
+# DCS MCP - Translation Helps Navigator
 
-This project exposes a minimal Model Context Protocol (MCP) server that retrieves translation resources from the [Door43 Content Service](https://git.door43.org/).
+A React application for navigating unfoldingWord's translation helps, synchronized with scripture references.
 
-The server is built with [FastAPI](https://fastapi.tiangolo.com/) and implements two basic endpoints:
+## Features
 
-- `POST /v1/context` – return the content of a file in a Door43 repository. If no organization is supplied the server defaults to `unfoldingWord`; if no language is supplied the server defaults to `en` (English).
-- `GET /v1/catalog/search` – proxy to the Door43 catalog search API.
+- **Scripture Navigation**: Browse Bible books, chapters, and verses.
+- **Translation Notes**: View notes aligned with the scripture, including Greek/Hebrew quotes and English alignment.
+- **Translation Words**: Access definitions for key biblical terms.
+- **Translation Questions**: See comprehension questions for the current chapter.
+- **Responsive Design**: Works on desktop and mobile with a modern dark mode UI.
 
-## Running the server
+## Getting Started
+
+### Prerequisites
+
+- Node.js (v18 or higher)
+- npm
+
+### Installation
+
+1. Clone the repository:
+
+   ```bash
+   git clone <repository-url>
+   cd dcs-mcp
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+### Development
+
+Start the development server:
 
 ```bash
-pip install -e .
-uvicorn server:app --reload
+npm run dev
 ```
 
-## MCP Metadata
+The application will be available at `http://localhost:5173` (or the port shown in the terminal).
 
-The plugin metadata is exposed at `/.well-known/ai-plugin.json`. FastAPI automatically serves the OpenAPI schema at `/openapi.json` and `/docs`.
+### Build
+
+Build the application for production:
+
+```bash
+npm run build
+```
+
+The output will be in the `dist/` directory.
+
+## Project Structure
+
+- `src/`: Source code
+  - `components/`: React components (ScriptureView, HelpsPanel, etc.)
+  - `api/`: API client for fetching data
+  - `utils/`: Utility functions
+- `public/`: Static assets
